@@ -2,10 +2,8 @@ package com.eclipsesource.weaving.demo.faculty;
 
 import org.eclipse.osgi.framework.console.CommandInterpreter;
 import org.eclipse.osgi.framework.console.CommandProvider;
-import org.osgi.framework.BundleActivator;
-import org.osgi.framework.BundleContext;
 
-public class FacultyCommandProvider implements CommandProvider, BundleActivator {
+public class FacultyCommandProvider implements CommandProvider {
 
 	public void _faculty(CommandInterpreter ci) {
 		String argument = ci.nextArgument();
@@ -26,16 +24,6 @@ public class FacultyCommandProvider implements CommandProvider, BundleActivator 
 		} else {
 			return x * recur(x - 1);
 		}
-	}
-
-	@Override
-	public void start(BundleContext arg0) throws Exception {
-		System.out.println("start");
-	}
-
-	@Override
-	public void stop(BundleContext arg0) throws Exception {
-		System.out.println("stop");
 	}
 
 }

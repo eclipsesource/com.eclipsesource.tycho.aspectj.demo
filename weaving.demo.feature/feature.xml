@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="com.eclipsesource.weaving.demo.hello.feature"
-      label="com.eclipsesource.weaving.demo.hello.feature"
+      id="com.eclipsesource.weaving.demo.feature"
+      label="com.eclipsesource.weaving.demo.feature"
       version="0.1.0.qualifier"
       provider-name="ECLIPSESOURCE">
 

@@ -33,12 +33,13 @@
 
    <features>
       <feature id="org.eclipse.equinox.core.feature"/>
-      <feature id="com.eclipsesource.weaving.demo.hello.feature" version="0.1.0.qualifier"/>
+      <feature id="com.eclipsesource.weaving.demo.feature" version="0.1.0.qualifier"/>
    </features>
 
    <configurations>
       <plugin id="com.eclipsesource.weaving.demo.chronometry" autoStart="true" startLevel="3" />
       <plugin id="com.eclipsesource.weaving.demo.faculty" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="2" />
    </configurations>
 
