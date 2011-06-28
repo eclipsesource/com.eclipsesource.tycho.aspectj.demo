@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="weaving.demo_selfcontained" uid="weaving.demo_selfcontained" id="com.eclipsesource.weaving.demo.hello.weaving_demo_selfcontained" useFeatures="true" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-console -noexit -clean</programArgs>
+      <vmArgs>-Declipse.ignoreApp=true
+-Dosgi.noShutdown=true
+-Dosgi.java.profile=J2SE-1.6.profile
+-Dorg.aspectj.osgi.verbose=true
+-Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook
+-Dorg.aspectj.weaver.showWeaveInfo=true
+-Daj.weaving.verbose=true</vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="org.eclipse.equinox.core.feature"/>
+      <feature id="com.eclipsesource.weaving.demo.hello.feature" version="0.1.0.qualifier"/>
+   </features>
+
+   <configurations>
+      <plugin id="com.eclipsesource.weaving.demo.chronometry" autoStart="true" startLevel="3" />
+      <plugin id="com.eclipsesource.weaving.demo.faculty" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="2" />
+   </configurations>
+
+</product>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.eclipsesource.weaving.demo.hello.feature_0.1.0.qualifier.jar" id="com.eclipsesource.weaving.demo.hello.feature" version="0.1.0.qualifier">
+      <category name="weaving_demo"/>
+   </feature>
+   <category-def name="weaving_demo" label="Weaving Demo"/>
+</site>

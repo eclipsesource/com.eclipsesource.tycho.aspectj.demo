@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2011, EclipseSource and others All rights reserved. This 
+	program and the accompanying materials are made available under the terms 
+	of the Eclipse Public License v1.0 which accompanies this distribution, and 
+	is available at http://www.eclipse.org/legal/epl-v10.html -->
+
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<prerequisites>
+		<maven>3.0</maven>
+	</prerequisites>
+
+	<groupId>com.eclipsesource.sandbox.weaving.demo</groupId>
+	<artifactId>com.eclipsesource.sandbox.weaving.demo.parent</artifactId>
+	<packaging>pom</packaging>
+
+	<name>com.eclipsesource.sandbox.weaving.demo.parent</name>
+	<description>com.eclipsesource.sandbox.weaving.demo.parent</description>
+	<version>0.1.0-SNAPSHOT</version>
+
+	<properties>
+		<project-build-sourceEncoding>UTF-8</project-build-sourceEncoding>
+		<tycho-version>0.12.0</tycho-version>
+
+	</properties>
+
+	<modules>
+		<module>../platform</module>
+
+		<module>../weaving.demo.chronometry</module>
+		<module>../weaving.demo.faculty</module>
+		<module>../weaving.demo.feature</module>
+
+		<module>../repository</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>maven-osgi-compiler-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<encoding>${project-build-sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<resolver>p2</resolver>
+					<ignoreTychoRepositories>true</ignoreTychoRepositories>
+					<target>
+						<artifact>
+							<groupId>com.eclipsesource.sandbox.weaving.demo</groupId>
+							<artifactId>com.eclipsesource.sandbox.weaving.demo.platform</artifactId>
+							<version>0.1.0-SNAPSHOT</version>
+							<classifier>indigo</classifier>
+						</artifact>
+					</target>
+					<environments>
+						<environment>
+							<os>${build.os}</os>
+							<ws>${build.ws}</ws>
+							<arch>${build.arch}</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>maven-osgi-packaging-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<format>yyyyMMddHHmm</format>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<activation>
+				<os>
+					<family>mac</family>
+				</os>
+			</activation>
+			<id>macBuild</id>
+			<properties>
+				<build.os>macosx</build.os>
+				<build.ws>cocoa</build.ws>
+				<build.arch>x86_64</build.arch>
+			</properties>
+		</profile>
+		<profile>
+			<activation>
+				<os>
+					<name>Linux</name>
+				</os>
+			</activation>
+			<id>linuxBuild</id>
+			<properties>
+				<build.os>linux</build.os>
+				<build.ws>gtk</build.ws>
+				<build.arch>x86_64</build.arch>
+			</properties>
+		</profile>
+	</profiles>
+
+</project>

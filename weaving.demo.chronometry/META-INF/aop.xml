@@ -1,0 +1,6 @@
+<aspectj>
+	<aspects>
+		<aspect name="com.eclipsesource.weaving.demo.chronometry.CommandProviderChronometer" />
+
+	</aspects>
+</aspectj>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.6"?>
+
+<target name="Sandbox weaving (indigo)">
+<locations>
+<location includeAllPlatforms="false" includeMode="slicer" type="InstallableUnit">
+<unit id="org.eclipse.equinox.core.feature.feature.group" version="0.0.0"/>
+<unit id="org.eclipse.equinox.server.p2.feature.group" version="0.0.0"/>
+<unit id="org.eclipse.core.runtime.feature.feature.group" version="0.0.0"/>
+<unit id="org.eclipse.equinox.weaving.hook" version="0.0.0"/>
+<repository location="http://download.eclipse.org/releases/indigo/"/>
+</location>
+<location includeAllPlatforms="false" includeMode="slicer" type="InstallableUnit">
+<unit id="javax.annotation" version="0.0.0"/>
+<unit id="javax.servlet" version="2.5.0.v201103041518"/>
+<unit id="org.junit" version="4.8.2.v4_8_2_v20110321-1705"/>
+<unit id="org.hamcrest" version="0.0.0"/>
+<unit id="org.hamcrest.core" version="0.0.0"/>
+<unit id="org.apache.commons.logging" version="1.1.1.v201101211721"/>
+<unit id="org.h2" version="1.1.117.v201105142352"/>
+<unit id="org.objectweb.asm" version="0.0.0"/>
+<unit id="org.aopalliance" version="0.0.0"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository"/>
+</location>
+<location includeAllPlatforms="false" includeMode="slicer" type="InstallableUnit">
+<unit id="org.eclipse.equinox.weaving.aspectj" version="0.0.0"/>
+<unit id="org.aspectj.runtime" version="0.0.0"/>
+<unit id="org.aspectj.weaver" version="0.0.0"/>
+<repository location="http://download.eclipse.org/tools/ajdt/37/dev/update"/>
+</location>
+</locations>
+</target>

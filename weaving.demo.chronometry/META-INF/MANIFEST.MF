@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.eclipsesource.weaving.demo.chronometry
+Bundle-SymbolicName: com.eclipsesource.weaving.demo.chronometry
+Bundle-Version: 0.1.0.qualifier
+Bundle-Vendor: ECLIPSESOURCE
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.aspectj.runtime;visibility:=reexport
+Export-Package: com.eclipsesource.weaving.demo.chronometry
+Import-Package: org.osgi.framework,
+ org.eclipse.osgi.framework.console,
+ com.eclipsesource.weaving.demo.faculty
+Eclipse-SupplementBundle: com.eclipsesource.weaving.demo.faculty
