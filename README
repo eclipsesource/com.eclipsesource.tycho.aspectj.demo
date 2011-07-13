@@ -1,0 +1,15 @@
+This project contains a demo how to create AspectJ applications with Tycho.
+
+The short story:
+----------------
+
+cd releng
+mvn clean package
+
+The long story:
+---------------
+
+For a more detailed explanation see our
+blog post http://eclipsesource.com/blogs/2011/07/13/building-osgi-applications-that-use-aspectj-with-tycho-maven-3/
+
+
