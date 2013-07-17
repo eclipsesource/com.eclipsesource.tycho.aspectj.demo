@@ -16,9 +16,7 @@
 		<relativePath>../releng/pom.xml</relativePath>
 	</parent>
 
-	<groupId>com.eclipsesource.sandbox.weaving.demo</groupId>
 	<artifactId>com.eclipsesource.sandbox.weaving.demo.faculty</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
 
 </project>
